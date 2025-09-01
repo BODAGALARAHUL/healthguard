@@ -3,10 +3,11 @@
   "builds": [
     {
       "src": "smart-health-vite/package.json",
-      "use": "@vercel/static-build"
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/smart-health-vite/index.html" }
-  ]
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
 }

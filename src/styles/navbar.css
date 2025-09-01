@@ -1,0 +1,82 @@
+/* Add these styles to your global CSS or create a separate navbar.css file */
+
+/* Enhanced backdrop blur support */
+@supports (backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px)) {
+    .backdrop-blur-3xl {
+      -webkit-backdrop-filter: blur(48px);
+      backdrop-filter: blur(48px);
+    }
+  }
+  
+  /* Smooth glass morphism */
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(48px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  
+  .glass-nav.dark {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  /* Ultra smooth transitions */
+  .nav-transition {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Premium shadow effects */
+  .premium-shadow {
+    box-shadow: 
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06),
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .premium-shadow.dark {
+    box-shadow: 
+      0 4px 6px -1px rgba(0, 0, 0, 0.3),
+      0 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0 20px 25px -5px rgba(0, 0, 0, 0.4),
+      0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Hover glow effects */
+  .nav-glow:hover {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  
+  /* Focus visible improvements */
+  .nav-focus:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+    border-radius: 12px;
+  }
+  
+  /* Animation keyframes */
+  @keyframes nav-float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-2px); }
+  }
+  
+  .nav-float {
+    animation: nav-float 3s ease-in-out infinite;
+  }
+  
+  /* Mobile menu enhancements */
+  @media (max-width: 1024px) {
+    .mobile-menu-blur {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+  }
+  
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .nav-transition,
+    .nav-float {
+      animation: none;
+      transition: none;
+    }
+  }
